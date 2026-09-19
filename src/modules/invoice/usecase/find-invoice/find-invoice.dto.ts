@@ -1,20 +1,20 @@
-export interface FindInvoiceUseCaseInputDTO {
-  id: string;
+import Address from "../../../@shared/domain/value-object/address";
+
+export interface FindInvoiceUseCaseInputDto {
+  id: string
 }
 
-export interface FindInvoiceUseCaseOutputDTO {
-  id: string;
-  name: string;
-  document: string;
-  address: {
-    street: string;
-    number: string;
-    complement: string;
-    city: string;
-    state: string;
-    zipCode: string;
-  };
-  items: { id: string; name: string; price: number }[];
-  total: number;
-  createdAt: Date;
+export interface FindInvoiceUseCaseOutputDto {
+  id: string
+  name: string
+  document: string
+  address: Address
+  items: {
+    id: string
+    name: string
+    price: number
+  }[]
+  total: number
+  createdAt: Date
+  updatedAt: Date
 }
